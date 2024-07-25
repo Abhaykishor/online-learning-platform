@@ -20,7 +20,7 @@ export const CourseSelling = () => {
 
   const getCourses = async () => {
     try {
-      const COURSES_ENDPOINT = 'http://localhost:5000/api/courses';
+      const COURSES_ENDPOINT = 'https://online-learning-platform-27ze.onrender.com';
       const response = await fetch(COURSES_ENDPOINT);
       if (!response.ok) {
         throw new Error('Network response was not ok');
