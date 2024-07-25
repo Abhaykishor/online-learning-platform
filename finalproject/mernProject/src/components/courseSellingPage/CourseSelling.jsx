@@ -1,10 +1,5 @@
-
-
-
-// import React from 'react'
 import { getApiCall } from "../../shared/api-client.js";
 import CardSider from "../logo/CardSider";
-// import {SellingLogo} from "../logo/SellingLogo";
 import { Products } from "./Products"
 import { useEffect, useState } from "react"
 import Type from "./Type";
@@ -20,7 +15,7 @@ export const CourseSelling = () => {
 
   const getCourses = async () => {
     try {
-      const COURSES_ENDPOINT = 'https://online-learning-platform-27ze.onrender.com';
+      const COURSES_ENDPOINT = `${import.meta.env.VITE_API_URL}/api/courses`;
       const response = await fetch(COURSES_ENDPOINT);
       if (!response.ok) {
         throw new Error('Network response was not ok');
